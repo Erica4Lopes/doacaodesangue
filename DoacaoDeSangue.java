@@ -56,7 +56,7 @@ public class DoacaoDeSangue {
         System.out.println("4 - Dicas para doadores");
         System.out.println("5 - Quiz");
         System.out.println("0 - Sair");
-        System.out.print("Escolha uma opção: ");
+        System.out.println("Escolha uma opção: ");
     }
 
     public static void verificarElegibilidade(Scanner scanner) {
@@ -86,17 +86,17 @@ public class DoacaoDeSangue {
 
     public static void mostrarProcedimentos() {
         System.out.println("\nPROCEDIMENTOS DE DOÇÃO:");
-        System.out.println("Apresentar documento com foto");
-        System.out.println("Triagem e entrevista");
-        System.out.println("Coleta de sangue");
-        System.out.println("Lanche e descanso");
+        System.out.println("- Apresentar documento com foto.");
+        System.out.println("- Triagem e entrevista.");
+        System.out.println("- Coleta de sangue.");
+        System.out.println("- Lanche e descanso.");
     }
 
     public static void mostrarDicas() {
         System.out.println("\nDICAS PARA DOADORES:");
-        System.out.println("Hidrate-se bem");
-        System.out.println("Alimente-se antes de doar");
-        System.out.println("Evite esforço físico após a doação");
+        System.out.println("- Hidrate-se bem.");
+        System.out.println("- Alimente-se antes de doar.");
+        System.out.println("- Evite esforço físico após a doação.");
     }
 
     public static void quiz(Scanner scanner) {
@@ -104,7 +104,7 @@ public class DoacaoDeSangue {
         System.out.println("Qual a idade mínima para doar sangue?");
         System.out.println("1 - 16 anos");
         System.out.println("2 - 18 anos");
-        System.out.print("Resposta: ");
+        System.out.println("Resposta: ");
 
         int resposta = scanner.nextInt();
 
@@ -113,5 +113,10 @@ public class DoacaoDeSangue {
         } else {
             System.out.println("Resposta incorreta. A idade mínima é 18 anos.");
         }
+    }
+
+    public static void mostrarEncerramento() {
+        System.out.println("\nObrigado por utilizar o programa!");
+        System.out.println("Doe sangue, salve vidas!");
     }
 }
