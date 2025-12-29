@@ -58,4 +58,38 @@ public class DoacaoDeSangue {
         System.out.println("0 - Sair");
         System.out.print("Escolha uma opção: ");
     }
+
+    public static void verificarElegibilidade(Scanner scanner) {
+        System.out.println("Digite sua idade: ");
+        int idade = scanner.nextInt();
+
+        System.out.println("Digite seu peso(kg): ");
+        double peso = scanner.nextDouble();
+
+        if (idade >= 18 && peso >= 50) {
+            System.out.println("Você está APTO para doar sangue.");
+        } else {
+            System.out.println("Você NÃO está apto para doar sangue.");
+            System.out.println("Requisitos : idade mínima 18 anos e peso mínimo 50kg.");
+        }        
+    }
+
+    public static void agendarDoacao(Scanner scanner) {
+        System.out.println("Digite a data desejada (ex: 10/09): ");
+        String data = scanner.next();
+
+        System.out.println("Digite o horário desejado (ex: 15h): ");
+        String horario = scanner.next();
+
+        System.out.println("Doação agendada para " + data + " às " + horario + ".");
+    }
+
+    public static void mostrarProcedimentos() {
+        System.out.println("\nPROCEDIMENTOS DE DOÇÃO:");
+        System.out.println("- Apresentar documento com foto");
+        System.out.println("- Triagem e entrevista");
+        System.out.println("- Coleta de sangue");
+        System.out.println("- Lanche e descanso");
+    }
+
 }
