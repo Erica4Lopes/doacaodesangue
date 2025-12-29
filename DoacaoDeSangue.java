@@ -46,7 +46,7 @@ public class DoacaoDeSangue {
         System.out.println("   BEM-VINDO AO PROGRAMA DE");
         System.out.println("        DOAÇÃO DE SANGUE");
         System.out.println("=================================");
-}
+    }
 
     public static void mostrarMenu() {
         System.out.println("\nMENU PRINCIPAL");
@@ -85,7 +85,7 @@ public class DoacaoDeSangue {
     }
 
     public static void mostrarProcedimentos() {
-        System.out.println("\nPROCEDIMENTOS DE DOÇÃO:");
+        System.out.println("\nPROCEDIMENTOS DE DOAÇÃO:");
         System.out.println("- Apresentar documento com foto.");
         System.out.println("- Triagem e entrevista.");
         System.out.println("- Coleta de sangue.");
@@ -100,19 +100,42 @@ public class DoacaoDeSangue {
     }
 
     public static void quiz(Scanner scanner) {
-        System.out.println("\nQUIZ:");
-        System.out.println("Qual a idade mínima para doar sangue?");
-        System.out.println("1 - 16 anos");
-        System.out.println("2 - 18 anos");
-        System.out.println("Resposta: ");
+        System.out.println("\nQUIZ - Doação de Sangue");
+        int acertos = 0;
 
-        int resposta = scanner.nextInt();
+        int resposta1;
+        do {
+            System.out.println("\n1) Qual a idade mínima para doar sangue?\n1 - 16 anos\n2 - 18 anos\nResposta (1 ou 2):");
+            resposta1 = scanner.nextInt();
+            if (resposta1 != 1 && resposta1 != 2) {
+                System.out.println("Opção inválida");
+            }
+        } while (resposta1 != 1 && resposta1 != 2);
 
-        if (resposta == 2) {
-            System.out.println("Eba!! Resposa correta!");
+        if (resposta1 == 2) {
+            System.out.println("Resposta correta!");
+            acertos++;
         } else {
-            System.out.println("Resposta incorreta. A idade mínima é 18 anos.");
+            System.out.println("Infelizmente você errou. A idade mínima é 18 anos.");
         }
+
+        int resposta2;
+        do {
+            System.out.println("\n2) Qual o peso mínimo para doar sangue?\n1 - 45kg\n2 - 50kg\nResposta (1 ou 2): ");
+            resposta2 = scanner.nextInt();
+            if (resposta2 != 1 && resposta2 != 2) {
+                System.out.println("Opção inválida!");
+            }
+        } while (resposta2 != 1 && resposta2 != 2);
+
+        if (resposta2 == 2) {
+            System.out.println("Você acertou!");
+            acertos++;
+        } else {
+            System.out.println("Resposta incorreta. O peso mínimo é 50kg.");
+        }
+
+        System.out.println("\nVocê acertou " + acertos + " de 2 perguntas.");
     }
 
     public static void mostrarEncerramento() {
